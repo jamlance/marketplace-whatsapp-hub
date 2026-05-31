@@ -1,0 +1,35 @@
+@import "@inkress/apps-core/styles.css";
+
+/* WhatsApp Hub — pairing, app permissions, activity. */
+
+.wh-conn { display: flex; flex-direction: column; gap: 14px; }
+.wh-ok { display: flex; align-items: center; gap: 14px; padding: 16px; border-radius: var(--r); background: var(--ok-wash); color: var(--ok); }
+.wh-ok strong { color: var(--ink); }
+.wh-send { display: flex; flex-direction: column; gap: 8px; }
+.wh-send-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.wh-send-row input { flex: 1; min-width: 140px; }
+
+.wh-qr-wrap { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+.wh-qr { width: 240px; height: 240px; border: 1px solid var(--line); border-radius: var(--r); background: #fff; padding: 8px; }
+.wh-qr-steps ol { margin: 8px 0 0; padding-left: 18px; color: var(--ink-soft); line-height: 1.7; }
+
+.wh-start { text-align: center; max-width: 460px; margin: 8px auto; display: flex; flex-direction: column; gap: 14px; align-items: center; }
+.wh-illus { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-wash); color: var(--accent); }
+.wh-start p { color: var(--ink-soft); line-height: 1.6; margin: 0; }
+.wh-err { display: flex; align-items: center; gap: 8px; color: var(--bad); background: var(--bad-wash); border-radius: 8px; padding: 8px 12px; font-size: 0.85rem; }
+
+.wh-grants { display: flex; flex-direction: column; }
+.wh-grant { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.wh-grant-main strong { font-size: 0.95rem; }
+.wh-req { border-bottom: 1px solid var(--line); }
+.wh-req-actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+.wh-hint { font-size: 0.82rem; margin: 0 0 8px; }
+.wh-body { font-size: 0.8rem; max-width: 28rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* toggle switch */
+.wh-switch { position: relative; display: inline-block; width: 46px; height: 26px; flex-shrink: 0; }
+.wh-switch input { opacity: 0; width: 0; height: 0; }
+.wh-slider { position: absolute; cursor: pointer; inset: 0; background: var(--line-strong); border-radius: 26px; transition: 0.2s; }
+.wh-slider::before { content: ""; position: absolute; height: 20px; width: 20px; left: 3px; bottom: 3px; background: #fff; border-radius: 50%; transition: 0.2s; }
+.wh-switch input:checked + .wh-slider { background: var(--accent); }
+.wh-switch input:checked + .wh-slider::before { transform: translateX(20px); }
